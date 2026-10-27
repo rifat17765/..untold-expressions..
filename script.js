@@ -43,6 +43,7 @@ const story = [
   }
 ];
 
+const loveCard = document.querySelector(".love-card");
 const heartStage = document.getElementById("heartStage");
 const heartButton = document.getElementById("heartButton");
 const contentStage = document.getElementById("contentStage");
@@ -74,6 +75,7 @@ function sprinkleHearts() {
 
 function showStep(index) {
   currentStep = index;
+  loveCard.dataset.step = String(index);
   const item = story[index];
   eyebrow.textContent = item.eyebrow;
   heading.textContent = item.heading;
@@ -104,6 +106,7 @@ heartButton.addEventListener("click", () => {
 nextButton.addEventListener("click", () => {
   if (currentStep >= story.length - 1) {
     currentStep = -1;
+    loveCard.removeAttribute("data-step");
     contentStage.hidden = true;
     heartStage.hidden = false;
     heartButton.classList.remove("broken");
