@@ -55,6 +55,37 @@ const ornament = document.getElementById("ornament");
 const nextButton = document.getElementById("nextButton");
 const stepCount = document.getElementById("stepCount");
 const progressBar = document.getElementById("progressBar");
+const backgroundMusic = document.getElementById("backgroundMusic");
+const musicToggle = document.getElementById("musicToggle");
+const musicToggleLabel = document.getElementById("musicToggleLabel");
+
+let musicAttemptedOnHeart = false;
+
+function updateMusicToggle() {
+  const isPlaying = !backgroundMusic.paused;
+  musicToggleLabel.textContent = isPlaying ? "Pause music" : "Play music";
+  musicToggle.setAttribute("aria-label", isPlaying ? "Pause background music" : "Play background music");
+  musicToggle.setAttribute("aria-pressed", String(isPlaying));
+}
+
+async function playBackgroundMusic() {
+  try {
+    await backgroundMusic.play();
+  } catch {
+    updateMusicToggle();
+  }
+}
+
+musicToggle.addEventListener("click", () => {
+  if (backgroundMusic.paused) {
+    void playBackgroundMusic();
+  } else {
+    backgroundMusic.pause();
+  }
+});
+
+backgroundMusic.addEventListener("play", updateMusicToggle);
+backgroundMusic.addEventListener("pause", updateMusicToggle);
 
 let currentStep = -1;
 
@@ -95,6 +126,10 @@ function showStep(index) {
 }
 
 heartButton.addEventListener("click", () => {
+  if (!musicAttemptedOnHeart) {
+    musicAttemptedOnHeart = true;
+    void playBackgroundMusic();
+  }
   sprinkleHearts();
   heartButton.classList.add("broken");
   window.setTimeout(() => {

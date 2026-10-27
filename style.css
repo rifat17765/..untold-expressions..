@@ -211,3 +211,19 @@ footer span { color: #df4d80; margin: 0 3px; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
+
+
+.music-toggle {
+  margin-top: 14px;
+  border: 1px solid rgba(216, 63, 117, .24);
+  border-radius: 999px;
+  padding: 10px 16px;
+  color: #a92f5b;
+  background: rgba(255, 240, 245, .82);
+  font: 600 .8rem 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: transform .2s ease, background .2s ease;
+}
+.music-toggle:hover { transform: translateY(-1px); background: #fff0f5; }
+.music-toggle:focus-visible { outline: 3px solid #d83f75; outline-offset: 4px; }
+.music-note { margin-right: 6px; font-size: 1rem; }
