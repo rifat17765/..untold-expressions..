@@ -113,7 +113,7 @@ function showStep(index) {
   subheading.textContent = item.subheading;
   message.textContent = item.message;
   ornament.textContent = item.ornament;
-  stepCount.textContent = `A tiny love story · ${index + 1} of ${story.length}`;
+  stepCount.textContent = `A tiny untold story · ${index + 1} of ${story.length}`;
   progressBar.style.width = `${((index + 1) / story.length) * 100}%`;
   nextButton.hidden = false;
   nextButton.innerHTML = index === story.length - 1
@@ -147,7 +147,7 @@ nextButton.addEventListener("click", () => {
     heartButton.classList.remove("broken");
     progressBar.style.width = "20%";
     eyebrow.textContent = "MY FAVORITE PERSON";
-    stepCount.textContent = "A tiny love story · 1 of 5";
+    stepCount.textContent = "A tiny untold story · 1 of 5";
     nextButton.hidden = true;
     return;
   }
