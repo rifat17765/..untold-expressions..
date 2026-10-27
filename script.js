@@ -1,13 +1,13 @@
 const story = [
   {
     eyebrow: "A NOTE FROM MY HEART",
-    heading: "For My Love",
+    heading: "For My Favourite",
     subheading: "♡  my favorite hello, my hardest goodbye  ♡",
     message: "If I could give you one thing in this world, it would be the ability to see yourself through my eyes. Then you would understand why you mean so much to me.",
     ornament: "✧･ﾟ: *✧･ﾟ:* ♡ *:･ﾟ✧*:･ﾟ✧"
   },
   {
-    eyebrow: "THERE IS SO MUCH TO LOVE",
+    eyebrow: "THERE IS SO MUCH TO SAY",
     heading: "What I Like In You Most",
     subheading: "It's the little things that make you extraordinary.",
     message: "It's not just one thing. It's the beautiful way you make ordinary moments feel special, the kindness in your heart, and the comfort I find just by being close to you.",
