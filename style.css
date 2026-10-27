@@ -83,6 +83,7 @@ body {
 }
 .love-card[data-step="0"] .story-watermark-one { opacity: .20; }
 .love-card[data-step="1"] .story-watermark-two { opacity: .20; }
+.love-card[data-step="4"] .story-watermark-five { opacity: .20; }
 .love-card > :not(.story-watermark) { z-index: 1; }
 .progress {
   position: absolute; top: 0; left: 0; width: 100%; height: 4px;
